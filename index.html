@@ -1,12 +1,257 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Девайс</title>
-  </head>
-  <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Базовый HTML и CSS</a>».</p>
-
-  </body>
+	<head>
+		<meta charset="UTF-8">
+		<title>Девайс</title>
+	</head>
+	<body>
+		<header class="main-header container">
+			<nav class="main-nav">
+				<div class="header-logo">
+					<a href="#">Device</a>
+				</div>
+				<div class="left-block">
+					<form class="search-form" action="#" method="post">
+						<input type="search" name="search" placeholder="Поиск по сайту">
+						<button class="find" type="submit">Найти</button>
+					</form>
+					<a class="catalog-list" href="#">Каталог товаров</a>
+				</div>
+				<div class="right-block">
+					<div class="user-links">
+						<a class="login" href="#">Войти</a>
+						<a class="logout hidden" href="#">Выйти</a>
+						<a class="compare" href="#">Сравнить</a>
+						<a class="cart" href="#">Корзина</a>
+					</div>
+					<div class="service-links">
+						<a href="#">Доставка</a>
+						<a href="#">Гарантия</a>
+						<a href="#">Контакты</a>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<main>
+			<section class="slider container">
+				<h2 class="hidden">Промо</h2>
+				<input type="radio" id="toggle-1" name="switch" checked>
+				<input type="radio" id="toggle-2" name="switch">
+				<input type="radio" id="toggle-3" name="switch">
+				<div class="slider-controls">
+					<label for="toggle-1"></label>
+					<label for="toggle-2"></label>
+					<label for="toggle-3"></label>
+				</div>
+				<div class="slides">
+					<div class="slide stick active">
+						<div class="slide-image">
+							<img src="#" alt="">
+						</div>
+						<div class="slide-promo">
+							<h2 class="promo-title">Делай селфи, как Бен Стиллер!</h2>
+							<p class="promo-text">
+								Самая длинная палка для селфи доступна в нашем магазине. 
+								Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
+							</p>
+							<a href="#" class="btn">Подробнее</a>
+							<div class="descr">
+								<div class="descr-item">
+									<b>8,5 м</b>
+									<span>Длина палки</span>
+								</div>
+								<div class="descr-item">
+									<b>5 кг</b>
+									<span>Вес палки</span>
+								</div>
+								<div class="descr-item">
+									<b>Карбон</b>
+									<span>Материал</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="slide band">
+						<div class="slide-image">
+							<img src="#" alt="">
+						</div>
+						<div class="slide-promo">
+							<h2 class="promo-title">Худеем правильно!</h2>
+							<p class="promo-text">
+								Мотивирующие фитнесс-браслеты помогут найти в себе силы 
+								не пропускать занятия и соблюдать диету.
+							</p>
+							<a href="#" class="btn">Подробнее</a>
+							<div class="descr">
+								<div class="descr-item">
+									<b>48 часов</b>
+									<span>Без подзарядки</span>
+								</div>
+							</div>
+						</div>	
+					</div>
+					<div class="slide copter">
+						<div class="slide-image">
+							<img src="#" alt="">
+						</div>
+						<div class="slide-promo">
+							<h2 class="promo-title">Порхает как бабочка, жалит как пчела!</h2>
+							<p class="promo-text">
+								Этот обычный, на первый взгляд, квадрокоптер оснащен 
+								мощным лазером, замаскированным под стандартную камеру.
+							</p>
+							<a href="#" class="btn">Подробнее</a>
+							<div class="descr">
+								<div class="descr-item">
+									<b>800 м</b>
+									<span>Дальность полета</span>
+								</div>
+								<div class="descr-item">
+									<b>50 м</b>
+									<span>Радиус поражения</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="categories container">
+				<h2 class="hidden">Категории товаров</h2>
+				<a href="#" class="category">
+					<div class="category-image glasses"></div>
+					<p>Виртуальная реальность</p>
+				</a>
+				<a href="#" class="category">
+					<div class="category-image stick"></div>
+					<p>Моноподы для селфи</p>
+				</a>
+				<a href="#" class="category">
+					<div class="category-image camera"></div>
+					<p>Экшн-камеры</p>
+				</a>
+				<a href="#" class="category">
+					<div class="category-image band"></div>
+					<p>Фитнесс браслеты</p>
+				</a>
+				<a href="#" class="category">
+					<div class="category-image watch"></div>
+					<p>Умные часы</p>
+				</a>
+				<a href="#" class="category">
+					<div class="category-image copter"></div>
+					<p>Квадрокоптеры</p>
+				</a>
+			</section>
+			<section class="services">
+				<h2 class="hidden">Сервисы</h2>
+				<div class="tab-slider container">
+					<input type="radio" id="tab-1" name="tab-switch" checked>
+					<input type="radio" id="tab-2" name="tab-switch">
+					<input type="radio" id="tab-3" name="tab-switch">
+					<div class="tab-controls">
+						<label class="btn" for="tab-1">Доставка</label>
+						<label class="btn" for="tab-2">Гарантия</label>
+						<label class="btn" for="tab-3">Кредит</label>
+					</div>
+					<div class="tab-slides">
+						<div class="tab-slide delivery active">
+							<h2>Доставка</h2>
+							<p>
+								Мы с удовольствием доставим ваш товар прямо к вашему 
+								подъезду совершенно бесплатно! Ведь мы неплохо заработаем, 
+								поднимая его на ваш этаж.
+							</p>
+						</div>
+						<div class="tab-slide warranty">
+							<h2>Гарантия</h2>
+							<p>
+								Если из-за возгарания купленного у нас товара у вас сгорит 
+								дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.
+							</p>
+						</div>
+						<div class="tab-slide credit">
+							<h2>Кредит</h2>
+							<p>
+								Залезть в долговую яму стало проще! Кредитные консультанты подберут для 
+								вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="brands container">
+				<h2 class="hidden">Популярные бренды</h2>
+				<div class="brand-logo dji">
+					<img src="#" alt="">
+				</div>
+				<div class="brand-logo sp-gadgets">
+					<img src="#" alt="">
+				</div>
+				<div class="brand-logo gopro">
+					<img src="#" alt="">
+				</div>
+				<div class="brand-logo vive">
+					<img src="#" alt="">
+				</div>
+			</section>
+			<div class="container">
+				<section class="company-descr">
+					<h2>О нас</h2>
+					<p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+					<p>
+						Мы можем доставить ваш товар в самые отдаленные точки России! 
+						DEVICE работает со многими транспортными компаниями:
+					</p>
+					<ul class="transport-companies">
+						<li>Деловые Линии</li>
+						<li>Автотрейдинг</li>
+						<li>ЖелДорЭкспедиция</li>
+					</ul>
+					<a class="btn" href="#">Подробнее о нас</a>
+				</section>
+				<section class="company-contancts">
+					<h2>Контакты</h2>
+					<p>
+						Вы можете забрать товар сами, заехав в наш офис. 
+						Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
+					</p>
+					<div class="map">
+						<a href="#">
+							<img src="#" alt="">
+						</a>
+					</div>
+					<a class="btn" href="#">Напишите нам</a>
+				</section>
+			</div>
+		</main>
+		<footer class="main-footer">
+			<div class="container">
+				<div class="left-block">	
+					<a class="footer-logo" href="#">Device</a>
+					<p class="company-adress">г. Москва, ул. Строителей, 15</p>
+				</div>
+				<div class="middle-block">
+					<div class="footer-service-links">
+						<a href="#">Доставка</a>
+						<a href="#">Гарантия</a>
+						<a href="#">Контакты</a>
+					</div>
+					<div class="social-links">
+						<a class="social-btn fb" href="#">Facebook</a>
+						<a class="social-btn inst" href="#">Instagram</a>
+						<a class="social-btn tw" href="#">Twitter</a>
+					</div>
+				</div>
+				<div class="right-block">
+					<div class="user-links">
+						<a class="login yellow" href="#">Войти</a>
+						<a class="compare yellow" href="#">Сравнить</a>
+						<a class="cart yellow" href="#">Корзина</a>
+					</div>
+					<p>Тел.: +7 (495) 495-95-95</p>
+					<a class="copyright" href="#">HTML Academy</a>
+				</div>
+			</div>
+		</footer>
+	</body>
 </html>
