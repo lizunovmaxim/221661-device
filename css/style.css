@@ -1,0 +1,24 @@
+body {
+	font-family: "Open Sans", "Arial", sans-serif;
+	font-size: 15px;
+	font-weight: 300;
+	line-height: 30px;
+	color: #464646;
+}
+
+	font-family: "Gilroy", "Arial", sans-serif;
+	font-size: 47px;
+	font-weight: 700;
+	line-height: 56px;
+	color: #000000;
+}
+
+h2.hidden {
+	position: absolute;
+	left: 0;
+	top: -500px;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
