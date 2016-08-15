@@ -380,6 +380,98 @@ h2.hidden {
 
 
 
+/* CATALOG */
+
+
+
+.stretch-wrapper {
+	position: relative;
+}
+
+.stretch-wrapper::before {
+	content: "";
+	width: 100%;
+	height: 70px;
+	position: absolute;
+	background-image: -webkit-linear-gradient(left, #dbdbdb 50%, #ebebeb 50%);
+	background-image: linear-gradient(left, #dbdbdb 50%, #ebebeb 50%);
+	z-index: -1;
+}
+
+.stretch-wrapper::after {
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 70px;
+	background-image: -webkit-linear-gradient(left, #eeeeee 50%, #ffffff 50%);
+	background-image: linear-gradient(left, #eeeeee 50%, #ffffff 50%);
+	z-index: -1;
+}
+
+.stretch-wrapper .container {
+	background-image: -webkit-linear-gradient(left, #eeeeee 368px, #ffffff 0%);
+	background-image: linear-gradient(left, #eeeeee 368px, #ffffff 0%);
+}
+
+.filter {
+	float: left;
+	width: 328px;
+}
+
+.filter-title {
+	background-color: #dbdbdb;
+	min-height: 70px;
+}
+
+.catalog-content {
+	float: right;
+	width: 832px;
+}
+
+.catalog-sort {
+	background-color: #ebebeb;
+	min-height: 70px;
+}
+
+.catalog-items {
+	margin-top: 69px;
+	margin-left: 72px;
+	font-size: 0;
+}
+
+.catalog-item {
+	display: inline-block;
+	vertical-align: top;
+	width: 360px;
+	margin-right: 40px;
+	font-size: 18px;
+}
+
+.catalog-item:nth-child(2n+2) {
+	margin-right: 0;
+}
+
+.pagination {
+	margin-left: 72px;
+}
+
+.pagination .prev {
+	float: left;
+}
+
+.pagination .next {
+	float: right;
+}
+
+.page-numbers {
+	width: 480px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+
+
 /* FOOTER */ 
 
 

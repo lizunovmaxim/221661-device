@@ -9,8 +9,8 @@
 	<body>
 		<header class="main-header container">
 			<div class="header-container">
-				<a class="header-logo" href="#">Device</a>
-				<div class="top-bar">
+				<a class="header-logo" href="index.html">Device</a>
+				<div class="top-bar clearfix">
 					<form class="search-form" action="#" method="post">
 						<input type="search" name="search" placeholder="Поиск по сайту">
 						<button class="find" type="submit">Найти</button>
@@ -58,9 +58,11 @@
 				</ul>
 			</div>
 			<div class="stretch-wrapper">
-				<div class="left-column">
+				<div class="container clearfix">
 					<div class="filter">
-						<span>Фильтр:</span>
+						<div class="filter-title">
+							<span>Фильтр:</span>
+						</div>
 						<form class="filter-form" action="#" method="post">
 							<fieldset>
 								<legend>Стоимость</legend>
@@ -93,16 +95,14 @@
 							<button class="btn" type="submit">Показать</button>
 						</form>
 					</div>
-				</div>
-				<div class="right-column">
 					<div class="catalog-content">
 						<div class="catalog-sort">
 							<span>Сортировка:</span>
 							<a class="sort-option active" href="#">По цене</a>
 							<a class="sort-option" href="#">По типу</a>
 							<a class="sort-option" href="#">По популярности</a>
-							<a class="sort-up" href="#"></a>
-							<a class="sort-down active-arrow" href="#"></a>
+							<a class="sort-up" href="#">По возрастанию</a>
+							<a class="sort-down active-arrow" href="#">По убыванию</a>
 						</div>
 						<div class="catalog-items">
 							<div class="catalog-item">
@@ -150,21 +150,21 @@
 								</div>
 							</div>
 						</div>
-						<div class="pagination">
-							<a class="prev" href="#" >Назад</a>
+						<div class="pagination clearfix">
+							<span class="prev" href="#" >Назад</span>
+							<a class="next" href="#">Вперед</a>
 							<div class="page-numbers">
-								<a href="#">1</a>
+								<span>1</span>
 								<a href="#">2</a>
 								<a href="#">3</a>
 							</div>
-							<a class="next" href="#">Вперед</a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</main>
 		<footer class="main-footer">
-			<div class="container">
+			<div class="container clearfix">
 				<div class="left-block">	
 					<a class="footer-logo" href="#">Device</a>
 					<p class="company-adress">г. Москва, ул. Строителей, 15</p>
