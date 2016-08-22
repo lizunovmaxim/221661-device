@@ -15,17 +15,11 @@
 						<input class="search-field" type="search" name="search" placeholder="Поиск по сайту">
 						<button class="search-btn" type="submit">Найти</button>
 					</form>
-					<ul class="user-menu authorized">
-						<li class="login"><a href="#">Войти</a></li>
-						<li class="compare"><a href="#">Сравнить</a></li>
-						<li class="cart"><a href="#">Корзина</a></li>
-					</ul>
-					<ul class="user-menu">
-						<li class="profile"><a href="#">Валентин Петухов</a></li>
-						<li class="logout"><a href="#">Выйти</a></li>
-						<li class="compare"><a href="#">Сравнить</a></li>
-						<li class="cart"><a href="#">Корзина</a></li>
-					</ul>
+					<div class="user-menu">
+						<a class="login" href="#">Войти</a>
+						<a class="compare" href="#">Сравнить</a>
+						<a class="cart" href="#">Корзина</a>
+					</div>
 				</div>	
 				<nav>
 					<ul class="content-menu">
@@ -34,7 +28,7 @@
 							<div class="drop-down-menu">
 								<ul class="drop-down-list">
 									<li class="second-level"><a href="#">Виртуальная реальность</a></li>
-									<li class="second-level"><a href="#">Моноподы для селфи</a></li>
+									<li class="second-level"><a href="catalog.html">Моноподы для селфи</a></li>
 									<li class="second-level"><a href="#">Экшн-камеры</a></li>
 								</ul>
 								<ul class="drop-down-list">
@@ -71,9 +65,9 @@
 								<div class="slide-image stick">
 									<img src="img/stick.png" width="384" height="486" alt="Фото товара">
 								</div>
-								<div class="slide-promo">
-									<h3 class="stick-title">Делай селфи, как Бен Стиллер!</h3>
-									<p class="promo-text">
+								<div class="slide-content content-stick">
+									<h3>Делай селфи, как Бен Стиллер!</h3>
+									<p>
 										Самая длинная палка для селфи доступна в нашем магазине. 
 										Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
 									</p>
@@ -98,9 +92,9 @@
 								<div class="slide-image band">
 									<img src="img/band.png" width="345" height="485" alt="Фото товара">
 								</div>
-								<div class="slide-promo">
-									<h3 class="band-title">Худеем правильно!</h3>
-									<p class="promo-text">
+								<div class="slide-content content-band">
+									<h3>Худеем правильно!</h3>
+									<p>
 										Мотивирующие фитнесс-браслеты помогут найти в себе силы 
 										не пропускать занятия и соблюдать диету.
 									</p>
@@ -117,9 +111,9 @@
 								<div class="slide-image copter">
 									<img src="img/copter.png" width="526" height="334" alt="Фото товара">
 								</div>
-								<div class="slide-promo">
-									<h3 class="copter-title">Порхает как бабочка, жалит как пчела!</h3>
-									<p class="promo-text">
+								<div class="slide-content content-copter">
+									<h3>Порхает как бабочка, жалит как пчела!</h3>
+									<p>
 										Этот обычный, на первый взгляд, квадрокоптер оснащен 
 										мощным лазером, замаскированным под стандартную камеру.
 									</p>
@@ -237,8 +231,8 @@
 					</div>
 				</div>
 			</section>
-			<div class="container clearfix">
-				<section class="about-company">
+			<section class="information container clearfix">
+				<div class="about-company">
 					<h2>О нас</h2>
 					<p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
 					<p>
@@ -251,8 +245,8 @@
 						<li>ЖелДорЭкспедиция</li>
 					</ul>
 					<a class="btn" href="#">Подробнее о нас</a>
-				</section>
-				<section class="company-contacts">
+				</div>
+				<div class="company-contacts">
 					<h2>Контакты</h2>
 					<p>
 						Вы можете забрать товар сами, заехав в наш офис. 
@@ -264,13 +258,13 @@
 						</a>
 					</div>
 					<a class="btn" href="#">Напишите нам</a>
-				</section>
-			</div>
+				</div>
+			</section>
 		</main>
 		<footer class="main-footer">
 			<div class="container clearfix">
 				<div class="left-block">	
-					<a class="footer-logo" href="#">Device</a>
+					<span class="footer-logo">Device</span>
 					<p class="company-adress">г. Москва, ул. Строителей, 15</p>
 				</div>
 				<div class="middle-block">
@@ -286,13 +280,13 @@
 					</div>
 				</div>
 				<div class="right-block">
-					<div class="user-links">
-						<a class="login yellow" href="#">Войти</a>
-						<a class="compare yellow" href="#">Сравнить</a>
-						<a class="cart yellow" href="#">Корзина</a>
+					<div class="footer-user-menu">
+						<a class="footer-login" href="#">Войти</a>
+						<a class="footer-compare" href="#">Сравнить</a>
+						<a class="footer-cart" href="#">Корзина</a>
 					</div>
-					<a class="phone-number" href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
-					<a class="copyright" href="https://htmlacademy.ru/">HTML Academy</a>
+					<a class="footer-phone-number" href="tel:+74954959595" title="Позвонить">Тел.: +7 (495) 495-95-95</a>
+					<a class="footer-copyright" href="https://htmlacademy.ru/">HTML Academy</a>
 				</div>
 			</div>
 		</footer>
