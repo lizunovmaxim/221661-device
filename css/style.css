@@ -1,18 +1,18 @@
 @font-face {
 	font-family: "Gilroy";
 	src: 
-		url("../fonts/gilroyextrabold.woff") format("woff"),
-		url("../fonts/gilroyextrabold.woff2") format("woff2");
-	font-weight: bold;
+		url("../fonts/gilroylight.woff") format("woff"),
+		url("../fonts/gilroylight.woff2") format("woff2");
+	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: "Gilroy";
 	src: 
-		url("../fonts/gilroylight.woff") format("woff"),
-		url("../fonts/gilroylight.woff2") format("woff2");
-	font-weight: normal;
+		url("../fonts/gilroyextrabold.woff") format("woff"),
+		url("../fonts/gilroyextrabold.woff2") format("woff2");
+	font-weight: 700;
 	font-style: normal;
 }
 
@@ -30,7 +30,7 @@
 	src : 
 		url("../fonts/opensanslight.woff") format("woff"),
 		url("../fonts/opensanslight.woff2") format("woff2");
-	font-weight: lighter;
+	font-weight: 300;
 	font-style: normal;
 }
 
@@ -41,9 +41,10 @@
 
 
 body {
+	min-width: 1240px;
 	font-family: "Open Sans", "Arial", sans-serif;
 	font-size: 15px;
-	font-weight: lighter;
+	font-weight: 300;
 	line-height: 18px;
 	color: #000000;
 }
@@ -51,7 +52,7 @@ body {
 h1, h2, h3 {
 	font-family: "Gilroy", "Arial", sans-serif;
 	font-size: 47px;
-	font-weight: bold;
+	font-weight: 700;
 	letter-spacing: 0.01em;
 	line-height: 56px;
 }
@@ -80,14 +81,16 @@ h2.hidden {
 
 .btn {
 	display: inline-block;
+	vertical-align: top;
 	padding: 9px 0;
 	font-family: "Gilroy", "Arial", sans-serif;
 	font-size: 18px;
-	font-weight: bold;
+	font-weight: 700;
 	line-height: 22px;
 	text-transform: uppercase;
 	text-decoration: none;
 	text-align: center;
+	word-wrap: break-word;
 	letter-spacing: 0.2em;
 	color: #000000;
 	background: url("../img/btn.png") repeat-x center / 1px;
@@ -108,7 +111,7 @@ h2.hidden {
 	width: 164px;
 	font-family: "Gilroy", "Arial", sans-serif;
 	font-size: 48px;
-	font-weight: bold;
+	font-weight: 700;
 	line-height: 58px;
 	letter-spacing: 0.01em;
 	text-transform: uppercase;
@@ -333,7 +336,7 @@ h2.hidden {
 .first-level > a {
 	font-family: "Gilroy", "Arial", sans-serif;
 	font-size: 18px;
-	font-weight: bold;
+	font-weight: 700;
 	line-height: 22px;
 	text-transform: uppercase;
 	text-decoration: none;
@@ -539,7 +542,7 @@ h2.hidden {
 	top: 67px;
 	font-family: "Gilroy", "Arial", sans-serif;
 	font-size: 179px;
-	font-weight: bold;
+	font-weight: 700;
 	letter-spacing: 0.01em;
 	color: #ffffff;
 	z-index: -1
@@ -671,7 +674,7 @@ h2.hidden {
 	margin-right: 34px;
 	font-family: "Gilroy", "Arial", sans-serif;
 	font-size: 18px;
-	font-weight: bold;
+	font-weight: 700;
 	line-height: 22px;
 	letter-spacing: 0.01em;
 	color: #000000;
@@ -768,7 +771,7 @@ h2.hidden {
 	min-height: 40px;
 	font-family: "Gilroy", "Arial", sans-serif;
 	font-size: 18px;
-	font-weight: bold;
+	font-weight: 700;
 	text-transform: uppercase;
 	text-align: center;
 	line-height: 22px;
@@ -834,7 +837,7 @@ h2.hidden {
 
 
 .brands {
-	margin-bottom: 93px;
+	margin-bottom: 102px;
 }
 
 .brands-wrapper {
@@ -843,6 +846,7 @@ h2.hidden {
 
 .brand-logo {
 	display: inline-block;
+	vertical-align: top;
 	width: 260px;
 	height: 100px;
 	margin-right: 40px;
@@ -922,7 +926,7 @@ h2.hidden {
 	padding: 0;
 	font-family: "Gilroy", "Arial", sans-serif;
 	font-size: 16px;
-	font-weight: bold;
+	font-weight: 700;
 	line-height: 19px;
 	list-style: none;
 }
@@ -1043,15 +1047,14 @@ h2.hidden {
 
 .filter-form {
 	box-sizing: border-box;
-	padding: 69px 68px 0 60px;
+	padding: 69px 68px 0 58px;
 }
 
 .filter-title {
-	display: block;
 	padding: 25px 0 26px 61px;
 	font-family: "Gilroy", "Arial", sans-serif;
 	font-size: 16px;
-	font-weight: bold;
+	font-weight: 700;
 	text-transform: uppercase;
 	letter-spacing: 0.2em;
 	line-height: 19px;
@@ -1080,7 +1083,7 @@ h2.hidden {
 	width: 100%;
 	font-family: "Gilroy", "Arial", sans-serif;
 	font-size: 18px;
-	font-weight: bold;
+	font-weight: 700;
 	letter-spacing: 0.01em;
 }
 
@@ -1150,7 +1153,7 @@ h2.hidden {
 }
 
 .price-range label {
-	margin-right: 4px;
+	margin-right: 5px;
 }
 
 .price-range input[type="text"] {
@@ -1173,18 +1176,19 @@ h2.hidden {
 	position: relative;
 	display: block;
 	margin-bottom: 24px;
-	padding-left: 39px;
+	padding-left: 40px;
 	font-size: 14px;
 	line-height: 16px;
 	letter-spacing: 0.01em;
 	cursor: pointer;
 }
 
-.filter-checkbox:last-child {
+.filter-checkbox:last-of-type {
 	margin-bottom: 43px;
 }
 
-.filter-checkbox span {
+.filter-checkbox::before {
+	content: "";
 	position: absolute;
 	top: -4px;
 	left: 0;
@@ -1193,25 +1197,26 @@ h2.hidden {
 	background-color: #dbdbdb;
 }
 
-.filter-checkbox:hover span {
+.filter-checkbox:hover::before {
 	background-color: #cecece;
 }
 
-.filter-checkbox:active span {
+.filter-checkbox:active::before {
 	background-color: #c4c4c4;
 }
 
-.filter-checkbox input[type="checkbox"]:checked + span::before {
+input[id^="color"]:checked + .filter-checkbox::after {
 	content: "";
 	position: absolute;
-	top: 8px;
-	left: 5px;
+	top: 4px;
+	left: 6px;
 	width: 12px;
 	height: 7px;
 	background: url("../img/small-icons.png") no-repeat -5px -326px;
 }
 
-.filter-radio span {
+.filter-radio::before {
+	content: "";
 	position: absolute;
 	top: -4px;
 	left: 0;
@@ -1222,19 +1227,19 @@ h2.hidden {
 	border: 2px solid #c6c6c6;
 }
 
-.filter-radio:hover span {
+.filter-radio:hover::before {
 	border-color: #bcbcbc;
 }
 
-.filter-radio:active span {
+.filter-radio:active::before {
 	border-color: #acacac;
 }
 
-.filter-radio input[type="radio"]:checked + span::before {
+input[id^="bluetooth"]:checked + .filter-radio::after {
 	content: "";
 	position: absolute;
-	top: 5px;
-	left: 5px;
+	top: 3px;
+	left: 7px;
 	box-sizing: border-box;
 	width: 9px;
 	height: 9px;
@@ -1265,7 +1270,7 @@ h2.hidden {
 	margin-right: 51px;
 	font-family: "Gilroy", "Arial", sans-serif;
 	font-size: 16px;
-	font-weight: bold;
+	font-weight: 700;
 	text-transform: uppercase;
 	letter-spacing: 0.2em;
 	line-height: 19px;
@@ -1343,7 +1348,7 @@ h2.hidden {
 	width: 260px;
 	font-family: "Gilroy", "Arial", sans-serif;
 	font-size: 18px;
-	font-weight: bold;
+	font-weight: 700;
 	letter-spacing: 0.01em;
 	line-height: 22px;
 	text-decoration: none;
@@ -1378,11 +1383,14 @@ h2.hidden {
 	z-index: 40;
 	text-align: center;
 	opacity: 0;
-	transition: opacity 0.5s 0.2s ease-out;
+	transition: 
+		opacity 0.5s ease-out,
+		background 0.5s ease-out;
 }
 
 .add-buttons:hover {
 	opacity: 1;
+	background: rgba(238, 238, 238, 0.7)
 }
 
 .to-cart {
@@ -1407,22 +1415,6 @@ h2.hidden {
 	opacity: 0.2;
 }
 
-.item-overlay {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 360px;
-	height: 380px;
-	background-color: #eeeeee;
-	opacity: 0;
-	z-index: 30;
-	transition: opacity 0.4s ease-out;
-}
-
-.add-buttons:hover ~ .item-overlay {
-	opacity: 0.7;
-}
-
 .catalog-item.new::after {
 	content: "new";
 	position: absolute;
@@ -1441,7 +1433,7 @@ h2.hidden {
 	top: 50px;
 	right: 38px;
 	font-size: 14px;
-	font-weight: bold;
+	font-weight: 700;
 	letter-spacing: 0.05em;
 	color: #d7d7d7;
 }
@@ -1450,7 +1442,7 @@ h2.hidden {
 	margin: 38px 0 0 72px;
 	font-family: "Gilroy", "Arial", sans-serif;
 	font-size: 16px;
-	font-weight: bold;
+	font-weight: 700;
 	text-transform: uppercase;
 	letter-spacing: 0.2em;
 	line-height: 19px;
@@ -1568,7 +1560,7 @@ h2.hidden {
 	margin-right: 34px;
 	font-family: "Gilroy", "Arial", sans-serif;
 	font-size: 18px;
-	font-weight: bold;
+	font-weight: 700;
 	line-height: 22px;
 	letter-spacing: 0.2em;
 	text-decoration: none;
@@ -1715,4 +1707,140 @@ h2.hidden {
 
 .footer-copyright:active {
 	opacity: 0.3;
+}
+
+
+
+/* POP-UP'S */
+
+
+
+.modal-map {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-480px, -280px);
+	width: 960px;
+	height: 560px;
+	z-index: 1000;
+	box-shadow: 
+		-50px 0 60px -50px rgba(0, 0, 0, 0.75),
+		50px 0 60px -50px rgba(0, 0, 0, 0.75),
+		0 10px 20px rgba(0, 0, 0, 0.2);
+	background-color: #ffffff;
+}
+
+.modal-feedback {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-480px, -276px);
+	box-sizing: border-box;
+	padding: 94px 40px 0 100px;
+	width: 960px;
+	height: 553px;
+	z-index: 1000;
+	box-shadow: 
+		-50px 0 60px -50px rgba(0, 0, 0, 0.75),
+		50px 0 60px -50px rgba(0, 0, 0, 0.75),
+		0 10px 20px rgba(0, 0, 0, 0.2);
+	background-color: #ffffff;
+}
+
+.feedback-form {
+	font-size: 0;
+}
+
+.feedback-user,
+.feedback-email,
+.feedback-text {
+	display: inline-block;
+	vertical-align: top;
+	font-family: "Gilroy", "Arial", sans-serif;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 22px;
+}
+
+.feedback-user input,
+.feedback-email input,
+.feedback-text textarea {
+	display: block;
+	width: 100%;
+	margin: 8px 0 34px 0;
+	padding: 15px 20px 17px 20px;
+	box-sizing: border-box;
+	font-family: "Open Sans", "Arial", sans-serif;
+	font-size: 14px;
+	line-height: 18px;
+	color: #464646;
+	border: none;
+	background-color: #f2f2f2;
+	resize: none;
+	outline: none;
+}
+
+.feedback-text textarea {
+	min-height: 156px;
+}
+
+.feedback-user,
+.feedback-email {
+	width: 360px;
+}
+
+.feedback-user{
+	margin-right: 40px;
+}
+
+.feedback-text {
+	width: 760px;
+}
+
+.feedback-btn {
+	margin-top: 7px;
+	width: 200px;
+	border: none;
+	cursor: pointer;
+}
+
+.modal-close {
+	position: absolute;
+	top: 22px;
+	right: 22px;
+	width: 54px;
+	height: 54px;
+	font-size: 0;
+	border:none;
+	border-radius: 50%;
+	background-color: rgba(240, 197, 46, 0.5);
+	cursor: pointer;
+}
+
+.modal-close:hover {
+	background-color: rgba(240, 197, 46, 1);
+}
+
+.modal-close::after {
+	position: absolute;
+	content: "";
+	top: 26px;
+	left: 12px;
+	width: 30px;
+	height: 2px;
+	transform: rotate(45deg);
+	background-color: #ffffff;
+}
+
+.modal-close::before {
+	position: absolute;
+	content: "";
+	top: 26px;
+	left: 12px;
+	width: 30px;
+	height: 2px;
+	transform: rotate(-45deg);
+	background-color: #ffffff;
 }
