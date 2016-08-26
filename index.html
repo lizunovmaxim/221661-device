@@ -253,11 +253,11 @@
 						Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
 					</p>
 					<div class="map">
-						<a href="https://www.google.ru/maps/place/%D1%83%D0%BB.+%D0%A1%D1%82%D1%80%D0%BE%D0%B8%D1%82%D0%B5%D0%BB%D0%B5%D0%B9,+15,+%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0,+119311/@55.687034,37.5274293,17z/data=!3m1!4b1!4m5!3m4!1s0x46b54cf65f5c8955:0x694710ccd55501e!8m2!3d55.687031!4d37.529618">
+						<a class="full-map" href="https://www.google.ru/maps/place/%D1%83%D0%BB.+%D0%A1%D1%82%D1%80%D0%BE%D0%B8%D1%82%D0%B5%D0%BB%D0%B5%D0%B9,+15,+%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0,+119311/@55.687034,37.5274293,17z/data=!3m1!4b1!4m5!3m4!1s0x46b54cf65f5c8955:0x694710ccd55501e!8m2!3d55.687031!4d37.529618">
 							<img src="img/map.jpg" width="560" height="222" alt="г. Москва, ул. Строителей, 15">
 						</a>
 					</div>
-					<a class="btn" href="#">Напишите нам</a>
+					<a class="btn feedback-link" href="#">Напишите нам</a>
 				</div>
 			</section>
 		</main>
@@ -291,6 +291,7 @@
 			</div>
 		</footer>
 		<div class="modal-map">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.112308879439!2d37.52742931544439!3d55.68703400453064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1472226169745"></iframe>
 			<button class="modal-close" type="button">Закрыть</button>
 		</div>
 		<div class="modal-feedback">
@@ -311,5 +312,82 @@
 				<button class="modal-close" type="button">Закрыть</button>
 			</form>
 		</div>
+		<script>
+			var link = document.querySelector(".feedback-link");
+			var popup = document.querySelector(".modal-feedback");
+			var close = popup.querySelector(".modal-close");
+			var form = popup.querySelector("form");
+			var username = popup.querySelector("[name=user-name]");
+			var email = popup.querySelector("[name=user-email]");
+			var text = popup.querySelector("[name=feedback-text]");
+			var usernameStorage = localStorage.getItem("user-name");
+			var emailStorage = localStorage.getItem("user-email");
+
+			link.addEventListener("click", function(event) {
+				event.preventDefault();
+				popup.classList.add("modal-show");
+
+				if (usernameStorage) {
+					username.value = usernameStorage;
+					if (emailStorage) {
+						email.value = emailStorage;
+						text.focus();
+					} else {
+						email.focus();
+					}
+				} else {
+					username.focus();
+				}
+			});
+
+			close.addEventListener("click", function(event) {
+				event.preventDefault();
+				popup.classList.remove("modal-show");
+				popup.classList.remove("modal-error");
+			});
+
+			form.addEventListener("submit", function(event) {
+				if (!username.value || !email.value || !text.value) {
+					event.preventDefault();
+					popup.classList.remove("modal-error");
+					popup.offsetWidth = popup.offsetWidth;
+					popup.classList.add("modal-error");
+				} else {
+					localStorage.setItem("user-name", username.value)
+					localStorage.setItem("user-email", email.value);
+				}
+			});
+
+			window.addEventListener("keydown", function(event) {
+				if (event.keyCode === 27) {
+					if (popup.classList.contains("modal-show")) {
+						popup.classList.remove("modal-show");
+						popup.classList.remove("modal-error");
+					}
+				}
+			});
+
+			var mapOpen = document.querySelector(".full-map");
+			var mapPopup = document.querySelector(".modal-map");
+			var mapClose = mapPopup.querySelector(".modal-close");
+
+			mapOpen.addEventListener("click", function(event) {
+				event.preventDefault();
+				mapPopup.classList.add("modal-show");
+			});
+
+			mapClose.addEventListener("click", function(event) {
+				event.preventDefault();
+				mapPopup.classList.remove("modal-show");
+			});
+
+			window.addEventListener("keydown", function(event) {
+				if (event.keyCode === 27) {
+					if (mapPopup.classList.contains("modal-show")) {
+						mapPopup.classList.remove("modal-show");
+					}
+				}
+			});
+		</script>
 	</body>
 </html>
