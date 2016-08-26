@@ -964,6 +964,10 @@ h2.hidden {
 	height: 222px;
 }
 
+.full-map {
+	cursor: zoom-in;
+}
+
 
 
 /* CATALOG */
@@ -1720,7 +1724,8 @@ input[id^="bluetooth"]:checked + .filter-radio::after {
 	position: fixed;
 	top: 50%;
 	left: 50%;
-	transform: translate(-480px, -280px);
+	margin-left: -480px;
+	margin-top: -280px;
 	width: 960px;
 	height: 560px;
 	z-index: 1000;
@@ -1733,7 +1738,8 @@ input[id^="bluetooth"]:checked + .filter-radio::after {
 	position: fixed;
 	top: 50%;
 	left: 50%;
-	transform: translate(-480px, -276px);
+	margin-left: -480px;
+	margin-top: -276px;
 	box-sizing: border-box;
 	padding: 94px 40px 0 100px;
 	width: 960px;
@@ -1744,6 +1750,21 @@ input[id^="bluetooth"]:checked + .filter-radio::after {
 		50px 0 60px -50px rgba(0, 0, 0, 0.75),
 		0 10px 20px rgba(0, 0, 0, 0.2);
 	background-color: #ffffff;
+}
+
+.modal-show {
+	display: block;
+	animation: fade-in-left 0.4s;
+}
+
+.modal-error {
+	animation: vibro 0.7s;
+}
+
+.modal-map iframe {
+	width: 100%;
+	height: 100%;
+	border: 0;
 }
 
 .feedback-form {
@@ -1840,4 +1861,36 @@ input[id^="bluetooth"]:checked + .filter-radio::after {
 	height: 2px;
 	transform: rotate(-45deg);
 	background-color: #ffffff;
+}
+
+@keyframes vibro 
+{
+	0%, 100%
+	{
+		transform: translateX(0px);
+	}
+	10%, 30%, 50%, 70%, 90%
+	{
+		transform: translateX(5px);
+	}
+	20%, 40%, 60%, 80%
+	{
+		transform: translateX(-5px);
+	}
+}
+
+@keyframes fade-in-left
+{
+	0%
+	{
+		transform: translateX(-100%);
+
+		opacity: 0;
+	}
+	100%
+	{
+		transform: translateX(0%);
+
+		opacity: 1;
+	}
 }
