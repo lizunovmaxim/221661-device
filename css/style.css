@@ -94,6 +94,7 @@ h2.hidden {
 	letter-spacing: 0.2em;
 	color: #000000;
 	background: url("../img/btn.png") repeat-x center / 1px;
+	-webkit-transition: background-size 0.4s ease-out;
 	transition: background-size 0.4s ease-out;
 }
 
@@ -131,6 +132,7 @@ h2.hidden {
 
 
 .main-header {
+	background-image: -webkit-linear-gradient(#ffffff 40px, #f7e296 0);
 	background-image: linear-gradient(#ffffff 40px, #f7e296 0);
 }
 
@@ -143,20 +145,20 @@ h2.hidden {
 	color: #000000;
 }
 
-.header-logo-link:hover {
+.header-logo:hover {
 	color: #464646;
 	cursor: pointer;
 }
 
-.header-logo-link:active {
+.header-logo:active {
 	color: #666666;
 }
 
-.main-header a:not(.header-logo-link):not(.header-logo):not(.active):hover {
+.main-header a:not(.header-logo):not(.active):hover {
 	opacity: 0.6;
 }
 
-.main-header a:not(.header-logo-link):not(.header-logo):not(.active):active {
+.main-header a:not(.header-logo):not(.active):active {
 	opacity: 0.3;
 }
 
@@ -205,6 +207,12 @@ h2.hidden {
 .search-field:focus + .search-btn {
 	visibility: visible;
 	opacity: 1;
+	-webkit-transition: 
+		visibility 0.5s linear,
+		opacity 0.5s linear;
+	transition: 
+		visibility 0.5s linear,
+		opacity 0.5s linear;
 }
 
 .search-btn {
@@ -216,9 +224,12 @@ h2.hidden {
 	background-color: transparent;
 	visibility: hidden;
 	opacity: 0;
+	-webkit-transition: 
+		visibility 0.5s 2s linear,
+		opacity 0.5s 2s linear;
 	transition: 
-		visibility 0.5s linear,
-		opacity 0.5s linear;
+		visibility 0.5s 2s linear,
+		opacity 0.5s 2s linear;
 }
 
 .search-btn::before{
@@ -236,7 +247,7 @@ h2.hidden {
 	color: #ffffff;
 }
 
-.find-btn:active {
+.search-btn:active {
 	color: #747474;
 }
 
@@ -395,6 +406,9 @@ h2.hidden {
 	background-color: #f7e296;
 	z-index: 10;
 	opacity: 0;
+	-webkit-transition: 
+		visibility 0.5s ease-out,
+		opacity 0.5s ease-out;
 	transition: 
 		visibility 0.5s ease-out,
 		opacity 0.5s ease-out;
@@ -427,6 +441,7 @@ h2.hidden {
 
 .promo {
 	margin-bottom: 95px;
+	background-image: -webkit-linear-gradient(#f7e296 111px, #ffffff 0%);
 	background-image: linear-gradient(#f7e296 111px, #ffffff 0%);
 }
 
@@ -516,12 +531,15 @@ h2.hidden {
 }
 
 #toggle-1:checked ~ .overflow-wrapper .slides {
+	-webkit-transform: translate(0);
 	transform: translate(0);
 }
 #toggle-2:checked ~ .overflow-wrapper .slides {
+	-webkit-transform: translate(-1160px);
 	transform: translate(-1160px);
 }
 #toggle-3:checked ~ .overflow-wrapper .slides {
+	-webkit-transform: translate(-2320px);
 	transform: translate(-2320px);
 }
 
@@ -662,6 +680,7 @@ h2.hidden {
 	width: 160px;
 	height: 160px;
 	background-color: #f7e296;
+	-webkit-transition: background-color 0.2s ease-in;
 	transition: background-color 0.2s ease-in;
 }
 
@@ -693,6 +712,7 @@ h2.hidden {
 
 .services {
 	margin-bottom: 94px;
+	background-image: -webkit-linear-gradient(#ffffff 100px, #e5e5e5 0);
 	background-image: linear-gradient(#ffffff 100px, #e5e5e5 0);
 }
 
@@ -758,6 +778,10 @@ h2.hidden {
 	color: #464646;
 }
 
+.delivery p {
+	width: 420px;
+}
+
 .tab-controls {
 	position: relative;
 	float: left;
@@ -783,6 +807,7 @@ h2.hidden {
 	letter-spacing: 0.2em;
 	color: #000000;
 	background: url("../img/btn.png") repeat-x center / 1px;
+	-webkit-transition: background-size 0.3s ease-in;
 	transition: background-size 0.3s ease-in;
 	z-index: 1;
 }
@@ -814,7 +839,9 @@ h2.hidden {
 	background-color: #000000;
 	z-index: -1;
 	opacity: 0;
+	-webkit-transform: translate(-500px);
 	transform: translate(-500px);
+	-webkit-transition: transform 0.3s linear;
 	transition: transform 0.3s linear;
 }
 
@@ -822,16 +849,20 @@ h2.hidden {
 #tab-2:checked ~ .tab-controls label:nth-child(2)::after,
 #tab-3:checked ~ .tab-controls label:nth-child(3)::after {
 	opacity: 1;
+	-webkit-transform: translateX(0);
 	transform: translateX(0);
 }
 
 #tab-1:checked ~ .overflow-wrapper-tab .tab-slides {
+	-webkit-transform: translate(0);
 	transform: translate(0);
 }
 #tab-2:checked ~ .overflow-wrapper-tab .tab-slides {
+	-webkit-transform: translate(-760px);
 	transform: translate(-760px);
 }
 #tab-3:checked ~ .overflow-wrapper-tab .tab-slides {
+	-webkit-transform: translate(-1520px);
 	transform: translate(-1520px);
 }
 
@@ -879,6 +910,7 @@ h2.hidden {
 
 .brand-logo img {
 	opacity: 0;
+	-webkit-transition: opacity 0.2s linear;
 	transition: opacity 0.2s linear;
 }
 
@@ -988,6 +1020,7 @@ h2.hidden {
 	position: absolute;
 	width: 100%;
 	height: 70px;
+	background-image: -webkit-linear-gradient(left, #dbdbdb 50%, #ebebeb 50%);
 	background-image: linear-gradient(90deg, #dbdbdb 50%, #ebebeb 50%);
 	z-index: -1;
 }
@@ -998,11 +1031,13 @@ h2.hidden {
 	top: 70px;
 	width: 100%;
 	height: 100%;
+	background-image: -webkit-linear-gradient(left, #eeeeee 50%, #ffffff 50%);
 	background-image: linear-gradient(90deg, #eeeeee 50%, #ffffff 50%);
 	z-index: -1;
 }
 
 .stretch-wrapper .container {
+	background-image: -webkit-linear-gradient(left, #eeeeee 368px, #ffffff 0);
 	background-image: linear-gradient(90deg, #eeeeee 368px, #ffffff 0);
 }
 
@@ -1137,6 +1172,13 @@ h2.hidden {
 
 .min-toggle:active,
 .max-toggle:active {
+	border: 3px solid #ffffff;
+	background-color: #7eae29;
+	box-shadow: 0 3px 4px -1px rgba(0, 0, 0, 0.75);
+}
+
+.min-toggle.active,
+.max-toggle.active {
 	border: 3px solid #ffffff;
 	background-color: #7eae29;
 	box-shadow: 0 3px 4px -1px rgba(0, 0, 0, 0.75);
@@ -1298,6 +1340,10 @@ input[id^="bluetooth"]:checked + .filter-radio::after {
 	opacity: 0.6;
 }
 
+.catalog-sort a:active {
+	opacity: 1;
+}
+
 .catalog-sort a.active {
 	opacity: 1;
 }
@@ -1392,6 +1438,9 @@ input[id^="bluetooth"]:checked + .filter-radio::after {
 	z-index: 40;
 	text-align: center;
 	opacity: 0;
+	-webkit-transition: 
+		opacity 0.5s ease-out,
+		background 0.5s ease-out;
 	transition: 
 		opacity 0.5s ease-out,
 		background 0.5s ease-out;
@@ -1545,12 +1594,12 @@ input[id^="bluetooth"]:checked + .filter-radio::after {
 	color: #f7e184;
 }
 
-.footer-logo-link:hover {
+.footer-logo:hover {
 	color: #f0c52e;
 	cursor: pointer;
 }
 
-.footer-logo-link:active {
+.footer-logo:active {
 	opacity: 0.3;
 }
 
@@ -1759,10 +1808,12 @@ input[id^="bluetooth"]:checked + .filter-radio::after {
 
 .modal-show {
 	display: block;
+	-webkit-animation: fade-in-left 0.4s;
 	animation: fade-in-left 0.4s;
 }
 
 .modal-error {
+	-webkit-animation: vibro 0.7s;
 	animation: vibro 0.7s;
 }
 
@@ -1853,6 +1904,7 @@ input[id^="bluetooth"]:checked + .filter-radio::after {
 	left: 12px;
 	width: 30px;
 	height: 2px;
+	-webkit-transform: rotate(45deg);
 	transform: rotate(45deg);
 	background-color: #ffffff;
 }
@@ -1864,23 +1916,64 @@ input[id^="bluetooth"]:checked + .filter-radio::after {
 	left: 12px;
 	width: 30px;
 	height: 2px;
+	-webkit-transform: rotate(-45deg);
 	transform: rotate(-45deg);
 	background-color: #ffffff;
+}
+
+@-webkit-keyframes vibro 
+{
+	0%, 100%
+	{
+		-webkit-transform: translateX(0px);
+		transform: translateX(0px);
+	}
+	10%, 30%, 50%, 70%, 90%
+	{
+		-webkit-transform: translateX(5px);
+		transform: translateX(5px);
+	}
+	20%, 40%, 60%, 80%
+	{
+		-webkit-transform: translateX(-5px);
+		transform: translateX(-5px);
+	}
 }
 
 @keyframes vibro 
 {
 	0%, 100%
 	{
+		-webkit-transform: translateX(0px);
 		transform: translateX(0px);
 	}
 	10%, 30%, 50%, 70%, 90%
 	{
+		-webkit-transform: translateX(5px);
 		transform: translateX(5px);
 	}
 	20%, 40%, 60%, 80%
 	{
+		-webkit-transform: translateX(-5px);
 		transform: translateX(-5px);
+	}
+}
+
+@-webkit-keyframes fade-in-left
+{
+	0%
+	{
+		-webkit-transform: translateX(-100%);
+		transform: translateX(-100%);
+
+		opacity: 0;
+	}
+	100%
+	{
+		-webkit-transform: translateX(0%);
+		transform: translateX(0%);
+
+		opacity: 1;
 	}
 }
 
@@ -1888,12 +1981,14 @@ input[id^="bluetooth"]:checked + .filter-radio::after {
 {
 	0%
 	{
+		-webkit-transform: translateX(-100%);
 		transform: translateX(-100%);
 
 		opacity: 0;
 	}
 	100%
 	{
+		-webkit-transform: translateX(0%);
 		transform: translateX(0%);
 
 		opacity: 1;
